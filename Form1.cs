@@ -52,5 +52,16 @@ namespace NumeroEntero_poo
             textBox1.Clear();
             textBox2.Clear();
         }
+
+        private void isParToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = objNumber1.isEven().ToString();
+        }
+
+        private void isMultipleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int multiple = int.Parse(textBox3.Text);
+            textBox2.Text = objNumber1.isMultiple(multiple).ToString();
+        }
     }
 }
