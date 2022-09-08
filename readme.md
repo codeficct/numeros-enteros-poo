@@ -3,8 +3,9 @@
 - 🧑🏻‍💻 Materia: Programación 1
 - 🚀 Lenguage: C#
 - 💅 Docente: Ing. Mollo
-- 🎓 Universidad: [UAGRM](https://www.uagrm.edu.bo/)
-- ⚡️ facultad: [FICCT](https://www.facebook.com/FICCTUAGRMOFICIAL)
+- ⚡️ Facultad: [FICCT](https://www.facebook.com/FICCTUAGRMOFICIAL)
+- 📦 Paradigma: Programación orientada a objetos
+- 🧑🏻‍💻 Desarrollador: [@sauterdev](https://github.com/LuiSauter)
 
 ## Contenido del Práctico
 Desarrollar el practico de la clase **Numero Entero** con las siguientes operaciones
