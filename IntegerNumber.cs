@@ -15,7 +15,7 @@ namespace NumeroEntero_poo
         {
             number = 0;
         }
-        // Methods
+        // Method set and get
         public void setNumber(int value)
         {
             number = value;
@@ -25,7 +25,7 @@ namespace NumeroEntero_poo
         {
             return number;
         }
-
+        // Methods
         public bool isEven()
         {
             return number % 2 == 0;
@@ -40,41 +40,33 @@ namespace NumeroEntero_poo
         {
             int index = 0;
             bool result = false;
-            for (index = 1; index < number; index++)
-            {
-                if (isMultiple(index))
-                {
-                    result = true;
-                }
-            }
+            for (index = 1; index <= number; index++)
+                if (isMultiple(index)) result = true;
             return result;
         }
 
         public bool isPrime()
         {
-            bool result = false;
-            int r;
-            if (number > 1)
+            int index;
+            double half = Math.Sqrt(number);
+            for (index = 2; index <= half; index++)
             {
-                int index = 1;
-                do
-                {
-                    index++;
-                    r = number % index;
-                } while (r != 0);
-                result = (number == 1);
+                if (number % index == 0) return false;
             }
-            return result;
+            return number > 1;
         }
 
         public int reverseInteger()
         {
-            int num, digit, result;
-            result = 0;
+            int num, digit, result = 0;
             num = number;
-            digit = num % 10;
-            result = (result * 10) + digit;
-            num = num / 10;
+            while (num > 0)
+            {
+                digit = num % 10;
+                result = (result * 10) + digit;
+                // num = Math.Truncate(num / 10);
+                num = num / 10;
+            }
             return result;
         }
 
@@ -83,19 +75,13 @@ namespace NumeroEntero_poo
             return reverseInteger() == number;
         }
 
-        public bool checkIfIsFibonacci()
+        public bool checkIfIsFibonacci(int a = 0, int b = 1)
         {
-            int a = 0, b = 0, c, index;
-            bool result = false;
-
-            for (index = 0; index <= number; index++)
-            {
-                c = a + b;
-                if (c == number) result = true;
-                a = b; b = c;
-            }
-
-            return result;
+            if (number == 0 || number == 1) return true;
+            int c = a + b;
+            if (c == number) return true;
+            else if (c > number) return false;
+            return checkIfIsFibonacci(b, c);
         }
 
         public double getFactorial()
