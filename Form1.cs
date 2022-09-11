@@ -135,6 +135,9 @@ namespace NumeroEntero_poo
             ActivateButton(sender, 8);
             labelTitle.Text = "Verificar si los dígitos de un número entero\nestán ordenados";
             currentExercise = 8;
+            textBoxMax.Enabled = false;
+            textBoxMin.Enabled = false;
+            isDisable = true;
         }
 
         private void estudianteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -208,8 +211,6 @@ namespace NumeroEntero_poo
                         textBoxRes.Text = objIntNumber1.getFactorial().ToString();
                         break;
                     case 8:
-                        objVector1.SelectInOrder(ref objVector2);
-                        textBoxResults.Text = objVector2.GetNumbers();
                         textBoxRes.Text = objIntNumber1.isOrder().ToString();
                         break;
                 }
