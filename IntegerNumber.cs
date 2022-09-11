@@ -64,7 +64,6 @@ namespace NumeroEntero_poo
             {
                 digit = num % 10;
                 result = (result * 10) + digit;
-                // num = Math.Truncate(num / 10);
                 num = num / 10;
             }
             return result;
@@ -101,21 +100,21 @@ namespace NumeroEntero_poo
 
         public bool isOrder()
         {
-            int numOrder = 0;
-            int[] numArray = new int[number.ToString().Length];
-            int digit, index, clone = number;
-            for (index = 0; index < number; index++)
+            int[] numArray = new int[number];
+            int digit, clone = number, index = 1, numOrder = 0;
+            while (clone > 0)
             {
                 digit = clone % 10;
                 numArray[index] = digit;
                 clone = clone / 10;
+                index++;
             }
 
             Array.Sort(numArray);
-
-            for (int i = 0; i < numArray.Length; i++)
+            int i;
+            foreach(int value in numArray)
             {
-                numOrder = numOrder * 10 + numArray[index];
+                numOrder = numOrder * 10 + value;
             }
             return number == numOrder;
         }
