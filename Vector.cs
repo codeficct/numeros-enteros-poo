@@ -134,21 +134,5 @@ namespace NumeroEntero_poo
                 }
             }
         }
-
-        //public void SelectInOrder(ref Vector vectorResult)
-        //{
-        //    int index;
-        //    IntegerNumber objIntNumber = new IntegerNumber();
-        //    vectorResult.number = 0;
-        //    for (index = 1; index <= number; index++)
-        //    {
-        //        objIntNumber.setNumber(numbers[index]);
-        //        if (objIntNumber.isOrder())
-        //        {
-        //            vectorResult.number++;
-        //            vectorResult.numbers[vectorResult.number] = numbers[index];
-        //        }
-        //    }
-        //}
     }
 }
