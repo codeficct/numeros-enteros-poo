@@ -380,3 +380,38 @@ namespace NumeroEntero_poo
 ```
 
 </details>
+
+
+    ## Apuntes de la clase vector
+
+```csharp
+public int FindSecuence(int element)
+{
+    int index = number; int flat = 0;
+    while ((index <= number) && (flat == 0))
+    {
+        if (numbers[index] == element) flat = index;
+        else index--;
+    }
+    return flat;
+}
+
+public int FindSecuence2(int element)
+{
+    int index = number, flag = 0, d = number;
+    while ((index <= d) && (flag == 0))
+    {
+        if ((index == element) || (numbers[d] == element))
+        {
+            if (numbers[index] == element) flag = index;
+            else flag = d;
+        }
+        else
+        {
+            index++; d--;
+        }`
+    }
+    return flag;
+}
+
+```
