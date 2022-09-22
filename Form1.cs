@@ -167,6 +167,12 @@ namespace NumeroEntero_poo
             }
         }
 
+        private void ordenarVectorToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            objVector1.OrderMethod();
+            textBoxResults.Text = objVector1.GetNumbers();
+        }
+
         private void buttonRun_Click(object sender, EventArgs e)
         {
             try
