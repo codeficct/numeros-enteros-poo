@@ -36,6 +36,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.informaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estudianteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuVectoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxParam1 = new System.Windows.Forms.TextBox();
             this.labelParam1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,6 +66,8 @@
             this.textBoxSet = new System.Windows.Forms.TextBox();
             this.labelRun = new System.Windows.Forms.Label();
             this.buttonRun = new System.Windows.Forms.Button();
+            this.ordenarVectorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -127,7 +130,8 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.AliceBlue;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.informaciónToolStripMenuItem});
+            this.informaciónToolStripMenuItem,
+            this.menuVectoresToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(592, 24);
@@ -148,6 +152,15 @@
             this.estudianteToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.estudianteToolStripMenuItem.Text = "Estudiante";
             this.estudianteToolStripMenuItem.Click += new System.EventHandler(this.estudianteToolStripMenuItem_Click);
+            // 
+            // menuVectoresToolStripMenuItem
+            // 
+            this.menuVectoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ordenarVectorToolStripMenuItem,
+            this.cargarToolStripMenuItem});
+            this.menuVectoresToolStripMenuItem.Name = "menuVectoresToolStripMenuItem";
+            this.menuVectoresToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.menuVectoresToolStripMenuItem.Text = "Menu Vectores";
             // 
             // textBoxParam1
             // 
@@ -515,6 +528,20 @@
             this.buttonRun.UseVisualStyleBackColor = false;
             this.buttonRun.Click += new System.EventHandler(this.buttonRun_Click);
             // 
+            // ordenarVectorToolStripMenuItem
+            // 
+            this.ordenarVectorToolStripMenuItem.Name = "ordenarVectorToolStripMenuItem";
+            this.ordenarVectorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ordenarVectorToolStripMenuItem.Text = "Ordenar Vector";
+            this.ordenarVectorToolStripMenuItem.Click += new System.EventHandler(this.ordenarVectorToolStripMenuItem_Click_1);
+            // 
+            // cargarToolStripMenuItem
+            // 
+            this.cargarToolStripMenuItem.Name = "cargarToolStripMenuItem";
+            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cargarToolStripMenuItem.Text = "cargar";
+            this.cargarToolStripMenuItem.Click += new System.EventHandler(this.cargarToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,6 +605,9 @@
         private System.Windows.Forms.TextBox textBoxMax;
         private System.Windows.Forms.TextBox textBoxSet;
         private System.Windows.Forms.TextBox textBoxRes;
+        private System.Windows.Forms.ToolStripMenuItem menuVectoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ordenarVectorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cargarToolStripMenuItem;
     }
 }
 
