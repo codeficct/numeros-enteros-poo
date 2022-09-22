@@ -111,7 +111,6 @@ namespace NumeroEntero_poo
             }
 
             Array.Sort(numArray);
-            int i;
             foreach(int value in numArray)
             {
                 numOrder = numOrder * 10 + value;
