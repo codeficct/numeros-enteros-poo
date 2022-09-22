@@ -8,22 +8,21 @@ namespace NumeroEntero_poo
 {
     class Vector
     {
-        const int MAX_LENGTH = 200;
         private int[] numbers;
         private int number;
         // Constructor
         public Vector()
         {
             number = 0;
-            numbers = new int[MAX_LENGTH];
         }
         // Methods
         public void SetNumber(int value, int max, int min)
         {
+            numbers = new int[value];
             int index;
             number = value;
             Random numRandom = new Random();
-            for (index = 1; index <= number; index++)
+            for (index = 0; index < value; index++)
                 numbers[index] = numRandom.Next(min, max);
         }
 
@@ -31,7 +30,7 @@ namespace NumeroEntero_poo
         {
             string result = "";
             int index;
-            for (index = 1; index <= number; index++)
+            for (index = 0; index < number; index++)
             {
                 if (index == number) result = result + numbers[index];
                 else result = result = result + numbers[index] + "  |  ";
@@ -39,18 +38,18 @@ namespace NumeroEntero_poo
             return result;
         }
 
-        public void SelectPairs(ref Vector objResult)
+        public void SelectPairs(ref Vector vectorResult)
         {
             IntegerNumber objIntNumber = new IntegerNumber();
             int index;
-            objResult.number = 0;
-            for (index = 1; index <= number; index++)
+            vectorResult.number = 0;
+            for (index = 0; index < number; index++)
             {
                 objIntNumber.setNumber(numbers[index]);
                 if (objIntNumber.isEven())
                 {
-                    objResult.number++;
-                    objResult.numbers[objResult.number] = numbers[index];
+                    vectorResult.number++;
+                    vectorResult.numbers[vectorResult.number] = numbers[index];
                 }
             }
         }
@@ -60,7 +59,7 @@ namespace NumeroEntero_poo
             IntegerNumber objIntNumber = new IntegerNumber();
             int index;
             vectorResult.number = 0;
-            for (index = 1; index <= number; index++)
+            for (index = 0; index < number; index++)
             {
                 objIntNumber.setNumber(numbers[index]);
                 if (objIntNumber.isMultiple(multiple))
@@ -77,7 +76,7 @@ namespace NumeroEntero_poo
             int index;
             vectorResult.number = 0;
             objIntNumber.setNumber(number);
-            for (index = 1; index <= number; index++)
+            for (index = 0; index < number; index++)
             {
                 if (objIntNumber.isMultiple(numbers[index]))
                 {
@@ -92,7 +91,7 @@ namespace NumeroEntero_poo
             int index;
             IntegerNumber objIntNumber = new IntegerNumber();
             vectorResult.number = 0;
-            for (index = 1; index <= number; index++)
+            for (index = 0; index < number; index++)
             {
                 objIntNumber.setNumber(numbers[index]);
                 if (objIntNumber.isPrime())
@@ -108,7 +107,7 @@ namespace NumeroEntero_poo
             int index;
             IntegerNumber objIntNumber = new IntegerNumber();
             vectorResult.number = 0;
-            for (index = 1; index <= number; index++)
+            for (index = 0; index < number; index++)
             {
                 objIntNumber.setNumber(numbers[index]);
                 if (objIntNumber.isPalindrome())
@@ -124,7 +123,7 @@ namespace NumeroEntero_poo
             int index;
             IntegerNumber objIntNumber = new IntegerNumber();
             vectorResult.number = 0;
-            for (index = 1; index <= number; index++)
+            for (index = 0; index < number; index++)
             {
                 objIntNumber.setNumber(numbers[index]);
                 if (objIntNumber.checkIfIsFibonacci(0, 1))
@@ -133,6 +132,18 @@ namespace NumeroEntero_poo
                     vectorResult.numbers[vectorResult.number] = numbers[index];
                 }
             }
+        }
+
+        // TODO: Use this method to resuable code - clean code
+        private void SelectMethod(ref Vector vectorResult, int index)
+        {
+            vectorResult.number++;
+            vectorResult.numbers[vectorResult.number] = numbers[index];
+        }
+
+        public void OrderMethod()
+        {
+            Array.Sort(numbers);
         }
     }
 }
